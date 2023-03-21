@@ -168,8 +168,8 @@ nav a {
   padding-left: 0.9rem;
 }
 
-.content-container table th:nth-child(4),
-.content-container table td:nth-child(4) {
+.content-container .available-movies-table th:nth-child(4),
+.content-container .available-movies-table td:nth-child(4) {
   text-align: center;
 }
 
@@ -182,12 +182,35 @@ nav a {
   width: 30px;
 }
 
-td button {
-  width: 100%;
+.available-movies-button {
   background-color: #363636;
+  padding: 0.7rem 1.5rem;
+}
+
+.available-movies-button,
+.yourMovies-button {
+  width: 100%;
   color: #FFF;
   border: none;
   font-weight: 700;
-  padding: 0.7rem 1rem;
   cursor: pointer;
+}
+
+.yourMovies-button {
+  background-color: #C93333;
+  padding: 0.7rem 0.1rem;
+}
+
+.yourMovies-time-button {
+  background-color: #363636;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+}
+
+.yourMovies-time-select {
+  background-color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0.1rem 0.9rem;
 }

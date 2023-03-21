@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,65 @@
   <link rel="stylesheet" href="styles.css">
   <title>Your Movies</title>
 </head>
+
 <body>
-  
+  <header>
+    <h1>Movie rental</h1>
+  </header>
+  <main>
+    <div class="main-container">
+      <nav>
+        <a href="home.html">Home</a>
+        <a class="nav-link" href="yourMovies.html">Your movies</a>
+        <a class="nav-link" href="profile.html">Profile</a>
+      </nav>
+      <div class="content-container">
+        <h1>Your movies</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Genre</th>
+              <th>Time</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Batman</td>
+              <td>Action</td>
+              <td>
+                <button class="yourMovies-time-button">&lt;</button>
+                <span class="yourMovies-time-select">12h</span>
+                <button class="yourMovies-time-button">&gt;</button>
+              </td>
+              <td>4.55$</td>
+              <td><button class="yourMovies-button">Remove</button></td>
+            </tr>
+            <tr>
+              <td>Batman</td>
+              <td>Action</td>
+              <td>
+                <button class="yourMovies-time-button">&lt;</button>
+                <span class="yourMovies-time-select">12h</span>
+                <button class="yourMovies-time-button">&gt;</button>
+              </td>
+              <td>4.55$</td>
+              <td><button class="yourMovies-button">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-left">
+      Made by: Inese Lapina
+    </div>
+    <div class="footer-right">
+      2023
+    </div>
+  </footer>
 </body>
+
 </html>
