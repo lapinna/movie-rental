@@ -249,3 +249,10 @@ nav a {
   margin-right: 0.7rem;
   margin-top: 0.3rem;
 }
+
+@media (max-width:650px){
+  .main-container{
+    width: 80%;
+    font-size: 12px;
+  }
+}
