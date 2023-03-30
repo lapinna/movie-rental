@@ -1,4 +1,4 @@
-function createList(items, tableId, btnText) {
+function createList(items, tableId, btnText, functionName) {
   const table = document.getElementById(tableId);
   items.forEach((item, pos) => {
     let row = document.createElement("tr");
@@ -14,7 +14,7 @@ function createList(items, tableId, btnText) {
 
     row.innerHTML += `
     <td>
-    <button id="rent-btn-${pos}" class="${tableId}-button" onclick="rentMovie(${pos})">
+    <button id="btn-${pos}" class="${tableId}-button" onclick="${functionName}(${pos})">
     ${btnText}
     </button>
     </td>

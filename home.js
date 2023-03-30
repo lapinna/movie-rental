@@ -11,7 +11,7 @@ const movies = [
 
 let yourMovies = [];
 
-createList(movies, "movie-list", "Rent");
+createList(movies, "movie-list", "Rent", "rentMovie");
 
 function checkStock(tableId) {
   let stock = document.querySelectorAll(`.${tableId}-3`);

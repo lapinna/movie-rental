@@ -238,6 +238,7 @@ nav a {
   border: none;
   border-radius: 2px;
   color: #FFF;
+  cursor: pointer;
 }
 
 .yourMovies-time-select {
