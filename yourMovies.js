@@ -25,17 +25,32 @@ timePlus.forEach((elem, index) => {
     if (parseInt(rentTime[index].innerHTML) === 168) {
       alert("Max hours reached!");
     } else {
-      rentTime[index].innerHTML = parseInt(rentTime[index].innerHTML) + 12 + "h";
+      rentTime[index].innerHTML =
+        parseInt(rentTime[index].innerHTML) + 12 + "h";
     }
-  })
-})
+  });
+});
 
 timeMinus.forEach((elem, index) => {
   elem.addEventListener("click", () => {
     if (parseInt(rentTime[index].innerHTML) === 12) {
       alert("Min hours reached!");
     } else {
-      rentTime[index].innerHTML = parseInt(rentTime[index].innerHTML) - 12 + "h";
+      rentTime[index].innerHTML =
+        parseInt(rentTime[index].innerHTML) - 12 + "h";
     }
-  })
-}) 
+  });
+});
+
+let priceCollection = document.getElementsByClassName("your-movie-list-3");
+for (let i = 0; i < yourMovies.length; i++) {
+  priceCollection.item(i).innerHTML = `${yourMovies[i].price}`;
+}
+
+function removeMovie(index) {
+  let table = document.getElementById("your-movie-list");
+  let element = yourMovies.indexOf(index);
+  table.deleteRow(element);
+  yourMovies.splice(index, 1);
+  localStorage.setItem("yourMovies", JSON.stringify(yourMovies));
+}
