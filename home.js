@@ -11,32 +11,6 @@ const movies = [
 
 let yourMovies = [];
 
-function createList(items, tableId, btnText) {
-  const table = document.getElementById(tableId);
-
-  items.forEach((item, pos) => {
-    let row = document.createElement("tr");
-    let itemAttributes = Object.values(item);
-    table.appendChild(row);
-
-    itemAttributes.forEach((attribute, index) => {
-      let data = document.createElement("td");
-      data.classList.add(`${tableId}-${index}`, `movie-${pos}`);
-      data.innerHTML = attribute;
-      row.appendChild(data);
-    });
-
-    row.innerHTML += `
-    <td>
-    <button id="rent-btn-${pos}" class="${tableId}-button" onclick="rentMovie(${pos})">
-    ${btnText}
-    </button>
-    </td>
-    `;
-  });
-  return table;
-}
-
 createList(movies, "movie-list", "Rent");
 
 function checkStock(tableId) {
@@ -54,7 +28,9 @@ checkStock("movie-list");
 function rentMovie(index) {
   if (movies[index].count === 0) {
     alert("Movie not available!");
+  } else {
     movies[index].count -= 1;
     yourMovies.push(movies[index]);
+    localStorage.setItem("yourMovies", JSON.stringify(yourMovies));
   }
 }

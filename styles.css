@@ -220,7 +220,7 @@ nav a {
 }
 
 .movie-list-button,
-.yourMovies-button {
+.your-movie-list-button {
   width: 100%;
   color: #FFF;
   border: none;
@@ -228,7 +228,7 @@ nav a {
   cursor: pointer;
 }
 
-.yourMovies-button {
+.your-movie-list-button {
   background-color: #C93333;
   padding: 0.7rem 0.1rem;
 }

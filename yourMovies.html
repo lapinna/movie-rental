@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   <link rel="stylesheet" href="styles.css">
+  <script defer src="utils.js"></script>
+  <script defer src="yourMovies.js"></script>
+
   <title>Your Movies</title>
 </head>
 
@@ -18,7 +21,7 @@
     <div class="main-container">
       <nav>
         <a href="home.html">Home</a>
-        <a class="nav-link" href="yourMovies.html">Your movies</a>
+        <a class="nav-link" id="nav-your-movies" href="yourMovies.html">Your movies</a>
         <a class="nav-link" href="profile.html">Profile</a>
       </nav>
       <div class="content-container">
@@ -32,29 +35,8 @@
               <th>Price</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Batman</td>
-              <td>Action</td>
-              <td>
-                <button class="yourMovies-time-button">&lt;</button>
-                <span class="yourMovies-time-select">12h</span>
-                <button class="yourMovies-time-button">&gt;</button>
-              </td>
-              <td>4.55$</td>
-              <td><button class="yourMovies-button">Remove</button></td>
-            </tr>
-            <tr>
-              <td>Batman</td>
-              <td>Action</td>
-              <td>
-                <button class="yourMovies-time-button">&lt;</button>
-                <span class="yourMovies-time-select">12h</span>
-                <button class="yourMovies-time-button">&gt;</button>
-              </td>
-              <td>4.55$</td>
-              <td><button class="yourMovies-button">Remove</button></td>
-            </tr>
+          <tbody id="your-movie-list">
+
           </tbody>
         </table>
       </div>
