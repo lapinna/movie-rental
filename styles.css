@@ -214,12 +214,12 @@ nav a {
   width: 30px;
 }
 
-.available-movies-button {
+.movie-list-button {
   background-color: #363636;
   padding: 0.7rem 1.5rem;
 }
 
-.available-movies-button,
+.movie-list-button,
 .yourMovies-button {
   width: 100%;
   color: #FFF;

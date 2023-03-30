@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   <link rel="stylesheet" href="styles.css">
+  <script defer src="home.js"></script>
   <title>Home</title>
 </head>
 
@@ -24,7 +25,7 @@
       <div class="content-container">
         <h1>Available Movies</h1>
         <table class="available-movies-table">
-          <thead>
+           <thead>
             <tr>
               <th>Name</th>
               <th>Genre</th>
@@ -32,36 +33,7 @@
               <th>Is in stock</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Batman</td>
-              <td>Action</td>
-              <td>4.55$</td>
-              <td><img src="img/check.png"></td>
-              <td><button class="available-movies-button">Rent</button></td>
-            </tr>
-            <tr>
-              <td>Batman</td>
-              <td>Action</td>
-              <td>4.55$</td>
-              <td><img src="img/check.png"></td>
-              <td><button class="available-movies-button">Rent</button></td>
-            </tr>
-            <tr>
-              <td>Batman</td>
-              <td>Action</td>
-              <td>4.55$</td>
-              <td><img src="img/check.png"></td>
-              <td><button class="available-movies-button">Rent</button></td>
-            </tr>
-            <tr>
-              <td>Batman</td>
-              <td>Action</td>
-              <td>4.55$</td>
-              <td><img src="img/cross.png"></td>
-              <td><button class="available-movies-button">Rent</button></td>
-            </tr>
-          </tbody>
+          <tbody id="movie-list"></tbody>
         </table>
       </div>
     </div>
