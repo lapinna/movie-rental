@@ -12,6 +12,14 @@ function createList(items, tableId, btnText, functionName) {
       row.appendChild(data);
     });
 
+    let stock = document.querySelectorAll(`.${tableId}-3`);
+    let count = itemAttributes[3];
+    if (count === 0) {
+      stock[`${pos}`].innerHTML = `<img src="img/cross.png">`;
+    } else {
+      stock[`${pos}`].innerHTML = `<img src="img/check.png">`;
+    }
+
     row.innerHTML += `
     <td>
     <button id="btn-${pos}" class="${tableId}-button" onclick="${functionName}(${pos})">

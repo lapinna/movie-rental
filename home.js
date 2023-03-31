@@ -1,36 +1,27 @@
-const movies = [
-  { title: "Titanic", genre: "Romance", price: 3, count: 2 },
-  { title: "28 Days Later", genre: "Science Fiction", price: 3, count: 3 },
-  { title: "Blue Valentine ", genre: "Romance", price: 3, count: 0 },
-  { title: "Apollo 13", genre: "Historical", price: 3, count: 5 },
-  { title: "The Blair Witch Project", genre: "Horror", price: 3, count: 4 },
-  { title: "Dumb & Dumber", genre: "Comedy", price: 3, count: 2 },
-  { title: "Ghostbusters", genre: "Comedy", price: 5, count: 6 },
-  { title: "Avatar", genre: "Science Fiction", price: 3, count: 0 },
-];
-
+let movies = JSON.parse(localStorage.getItem("movies"));
 let yourMovies = [];
 
 createList(movies, "movie-list", "Rent", "rentMovie");
 
-function checkStock(tableId) {
-  let stock = document.querySelectorAll(`.${tableId}-3`);
-  stock.forEach((elem) => {
-    if (elem.innerHTML > 0) {
-      elem.innerHTML = `<img src="img/check.png">`;
-    } else {
-      elem.innerHTML = `<img src="img/cross.png">`;
-    }
-  });
-}
-checkStock("movie-list");
-
 function rentMovie(index) {
   if (movies[index].count === 0) {
+    updadteStock(index, movies[index].count);
     alert("Movie not available!");
   } else {
     movies[index].count -= 1;
+    localStorage.setItem("movies", JSON.stringify(movies));
     yourMovies.push(movies[index]);
     localStorage.setItem("yourMovies", JSON.stringify(yourMovies));
+    updadteStock(index, movies[index].count);
+  }
+}
+
+function updadteStock(index, updateCount) {
+  let stock = document.querySelectorAll(`.movie-list-3`);
+  stock[index].innerHTML = `${updateCount}`;
+  if (updateCount === 0) {
+    stock[index].innerHTML = `<img src="img/cross.png">`;
+  } else {
+    stock[index].innerHTML = `<img src="img/check.png">`;
   }
 }
