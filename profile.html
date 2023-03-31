@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   <link rel="stylesheet" href="styles.css">
+  <script defer src="profile.js" ></script>
   <title>Profile</title>
 </head>
 
@@ -29,14 +30,14 @@
               <img src="img/profile-icon.png">
             </div>
             <div class="profile-details">
-              <p><b>Name:</b> John</p>
-              <p><b>Surname:</b> Newman</p>
-              <p><b>Email:</b> john.newman@gmail.com</p>
+              <p><b>Name:</b> <span id="profile-name"></span></p>
+              <p><b>Surname:</b> <span id="profile-surname"></span></p>
+              <p><b>Email:</b> <span id="profile-email"></span></p>
             </div>
           </div>
           <div class="profile-button-container">
-            <button class="profile-buttons">Reset password</button>
-            <button class="profile-buttons">Reset email</button>
+            <button class="profile-buttons" id="reset-password">Reset password</button>
+            <button class="profile-buttons" id="reset-email">Reset email</button>
           </div>
         </div>
       </div>

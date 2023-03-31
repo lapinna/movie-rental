@@ -71,10 +71,6 @@ form {
   /* display: none;*/
 }
 
-p * {
-  display: block;
-}
-
 input.invalid {
   border-color: #900;
   background-color: #fdd;
@@ -252,11 +248,13 @@ nav a {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   font-size: 14px;
   line-height: 20px;
 }
+
+
 
 .profile-picture {
   margin-right: 1.7rem;
@@ -267,7 +265,7 @@ nav a {
 }
 
 .profile-button-container {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -275,7 +273,7 @@ nav a {
 }
 
 .profile-buttons {
-  width: 100%;
+  width: 120px;
   background-color: #363636;
   color: #FFF;
   font-size: 11px;
@@ -284,10 +282,11 @@ nav a {
   padding: 0.2rem 1rem;
   margin-right: 0.7rem;
   margin-top: 0.3rem;
+  cursor: pointer;
 }
 
 @media (max-width:650px) {
-  .main-container{
+  .main-container {
     width: 80%;
     font-size: 12px;
   }
